@@ -4,9 +4,8 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: .
-    read_only: true
     volumes:
-      - .:/home/hello-world
+      - ./src:/home/hello-world/src:ro
     ports:
       - "3000:3000"
     env_file:
