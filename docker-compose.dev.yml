@@ -1,0 +1,13 @@
+version: "3"
+services:
+  react-app:
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    read_only: true
+    volumes:
+      - .:/home/hello-world
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.env
